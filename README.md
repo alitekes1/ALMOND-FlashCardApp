@@ -12,5 +12,5 @@ TR|
 Almond uygulaması, öğrenme sürecinde aktif bir rol oynayan ve bilgiyi hatırlamayı kolaylaştıran 
 bir eğitim aracıdır. Kullanıcılar kartları ekleyerek,düzenleyerek,silerek,güncelleyerek kart işlemeleri yapabilir.
 Tanımları ve açıklamaları hatırlayarak bilgiyi öğrenebilirler.Hatırlama düzeyine göre kendini puanlayabilir. 
-Puanladığı kartları tekrar gözden geçirebilir. Öğrenciler, öğretmenler, dil öğrenenler ve herhangi bir konuda
+Puanladığı kartları tekrar gözden geçirebilirler. Öğrenciler, öğretmenler, dil öğrenenler ve herhangi bir konuda
 öğrenmek isteyenler için faydalı bir araçtır.
