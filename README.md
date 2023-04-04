@@ -14,3 +14,4 @@ bir eğitim aracıdır. Kullanıcılar kartları ekleyerek,düzenleyerek,silerek
 Tanımları ve açıklamaları hatırlayarak bilgiyi öğrenebilirler.Hatırlama düzeyine göre kendini puanlayabilir. 
 Puanladığı kartları tekrar gözden geçirebilirler. Öğrenciler, öğretmenler, dil öğrenenler ve herhangi bir konuda
 öğrenmek isteyenler için faydalı bir araçtır.
+![image](https://user-images.githubusercontent.com/112067233/229801977-2282fe80-5304-4117-943e-13473a69293c.png)
