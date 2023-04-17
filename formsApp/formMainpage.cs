@@ -258,19 +258,19 @@ namespace formsApp
             }
             if (e.KeyCode == Keys.NumPad2)
             {
-                btnpuan1.PerformClick();
+                btnpuan2.PerformClick();
             }
             if (e.KeyCode == Keys.NumPad3)
             {
-                btnpuan1.PerformClick();
+                btnpuan3.PerformClick();
             }
             if (e.KeyCode == Keys.NumPad4)
             {
-                btnpuan1.PerformClick();
+                btnpuan4.PerformClick();
             }
             if (e.KeyCode == Keys.NumPad5)
             {
-                btnpuan1.PerformClick();
+                btnpuan5.PerformClick();
             }
             //
             if (e.Control && e.KeyCode == Keys.A)
