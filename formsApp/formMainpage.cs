@@ -272,7 +272,7 @@ namespace formsApp
             {
                 btnpuan5.PerformClick();
             }
-            //
+            // form kısayolları
             if (e.Control && e.KeyCode == Keys.A)
             {
                 formAdd form = new formAdd();
