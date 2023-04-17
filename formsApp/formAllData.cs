@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace formsApp
 {
@@ -34,12 +26,12 @@ namespace formsApp
         }
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formUpdate updateform = new formUpdate();   
+            formUpdate updateform = new formUpdate();
             updateform.ShowDialog();
         }
         private void listelerimToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formMyList myListform=new formMyList();
+            formMyList myListform = new formMyList();
             myListform.ShowDialog();
         }
     }

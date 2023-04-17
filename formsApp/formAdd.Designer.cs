@@ -127,35 +127,35 @@
             this.listelerimToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(452, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(457, 28);
             this.menuStrip1.TabIndex = 100;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.addToolStripMenuItem.Text = "Veri Sil";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.updateToolStripMenuItem.Text = "Veri Güncelle";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // tümVerileriGösterToolStripMenuItem
             // 
             this.tümVerileriGösterToolStripMenuItem.Name = "tümVerileriGösterToolStripMenuItem";
-            this.tümVerileriGösterToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.tümVerileriGösterToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
             this.tümVerileriGösterToolStripMenuItem.Text = "Tüm Verileri Göster";
             this.tümVerileriGösterToolStripMenuItem.Click += new System.EventHandler(this.tümVerileriGösterToolStripMenuItem_Click);
             // 
             // listelerimToolStripMenuItem
             // 
             this.listelerimToolStripMenuItem.Name = "listelerimToolStripMenuItem";
-            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(87, 26);
+            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.listelerimToolStripMenuItem.Text = "Listelerim";
             this.listelerimToolStripMenuItem.Click += new System.EventHandler(this.listelerimToolStripMenuItem_Click);
             // 
@@ -194,13 +194,15 @@
             // 
             // datagridADD
             // 
+            this.datagridADD.AllowUserToDeleteRows = false;
             this.datagridADD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagridADD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridADD.Location = new System.Drawing.Point(11, 334);
             this.datagridADD.Name = "datagridADD";
+            this.datagridADD.ReadOnly = true;
             this.datagridADD.RowHeadersWidth = 51;
             this.datagridADD.RowTemplate.Height = 24;
-            this.datagridADD.Size = new System.Drawing.Size(429, 287);
+            this.datagridADD.Size = new System.Drawing.Size(429, 332);
             this.datagridADD.TabIndex = 103;
             // 
             // formAdd
@@ -210,7 +212,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(452, 633);
+            this.ClientSize = new System.Drawing.Size(457, 678);
             this.Controls.Add(this.datagridADD);
             this.Controls.Add(this.linklabelnewlistAdd);
             this.Controls.Add(this.label1);
@@ -223,6 +225,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "formAdd";

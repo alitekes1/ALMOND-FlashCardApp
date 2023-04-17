@@ -42,28 +42,28 @@
             // tümVerileriGösterToolStripMenuItem
             // 
             this.tümVerileriGösterToolStripMenuItem.Name = "tümVerileriGösterToolStripMenuItem";
-            this.tümVerileriGösterToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.tümVerileriGösterToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.tümVerileriGösterToolStripMenuItem.Text = "Veri Ekle";
             this.tümVerileriGösterToolStripMenuItem.Click += new System.EventHandler(this.tümVerileriGösterToolStripMenuItem_Click);
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.addToolStripMenuItem.Text = "Veri Sil";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
             this.updateToolStripMenuItem.Text = "Veri Güncelle";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // listelerimToolStripMenuItem
             // 
             this.listelerimToolStripMenuItem.Name = "listelerimToolStripMenuItem";
-            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(87, 26);
             this.listelerimToolStripMenuItem.Text = "Listelerim";
             this.listelerimToolStripMenuItem.Click += new System.EventHandler(this.listelerimToolStripMenuItem_Click);
             // 
@@ -79,21 +79,22 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(452, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(452, 30);
             this.menuStrip1.TabIndex = 97;
             this.menuStrip1.Text = "menuStrip1";
-            //this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // datagridAllData
             // 
+            this.datagridAllData.AllowUserToDeleteRows = false;
             this.datagridAllData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagridAllData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridAllData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datagridAllData.Location = new System.Drawing.Point(0, 28);
+            this.datagridAllData.Location = new System.Drawing.Point(0, 30);
             this.datagridAllData.Name = "datagridAllData";
+            this.datagridAllData.ReadOnly = true;
             this.datagridAllData.RowHeadersWidth = 51;
             this.datagridAllData.RowTemplate.Height = 24;
-            this.datagridAllData.Size = new System.Drawing.Size(452, 605);
+            this.datagridAllData.Size = new System.Drawing.Size(452, 603);
             this.datagridAllData.TabIndex = 98;
             // 
             // formAllData

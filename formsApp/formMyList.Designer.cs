@@ -51,27 +51,27 @@
             this.tümVerileriGösterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(451, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(451, 30);
             this.menuStrip1.TabIndex = 97;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // veriEkleToolStripMenuItem
             // 
             this.veriEkleToolStripMenuItem.Name = "veriEkleToolStripMenuItem";
-            this.veriEkleToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.veriEkleToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.veriEkleToolStripMenuItem.Text = "Veri Ekle";
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.addToolStripMenuItem.Text = "Veri Sil";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
             this.updateToolStripMenuItem.Text = "Veri Güncelle";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -81,21 +81,20 @@
             this.oluşturToolStripMenuItem,
             this.silToolStripMenuItem});
             this.tümVerileriGösterToolStripMenuItem.Name = "tümVerileriGösterToolStripMenuItem";
-            this.tümVerileriGösterToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.tümVerileriGösterToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.tümVerileriGösterToolStripMenuItem.Text = "Yeni Liste Oluştur/Sil ";
-            //this.tümVerileriGösterToolStripMenuItem.Click += new System.EventHandler(this.tümVerileriGösterToolStripMenuItem_Click);
             // 
             // oluşturToolStripMenuItem
             // 
             this.oluşturToolStripMenuItem.Name = "oluşturToolStripMenuItem";
-            this.oluşturToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.oluşturToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.oluşturToolStripMenuItem.Text = "Oluştur";
             this.oluşturToolStripMenuItem.Click += new System.EventHandler(this.oluşturToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
@@ -105,12 +104,12 @@
             this.datagridMyList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagridMyList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridMyList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datagridMyList.Location = new System.Drawing.Point(0, 28);
+            this.datagridMyList.Location = new System.Drawing.Point(0, 30);
             this.datagridMyList.Name = "datagridMyList";
             this.datagridMyList.ReadOnly = true;
             this.datagridMyList.RowHeadersWidth = 51;
             this.datagridMyList.RowTemplate.Height = 24;
-            this.datagridMyList.Size = new System.Drawing.Size(451, 605);
+            this.datagridMyList.Size = new System.Drawing.Size(451, 603);
             this.datagridMyList.TabIndex = 98;
             // 
             // formMyList

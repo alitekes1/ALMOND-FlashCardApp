@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Collections.ObjectModel;
+using System.Data.Common;
 using System.Data.SqlClient;
-using System.Data;
+using System.Windows.Forms;
 
 namespace formsApp
 {
@@ -12,10 +13,9 @@ namespace formsApp
             InitializeComponent();
         }
         flashCardClass flashCard = new flashCardClass();
-        formUpdate updateform =new formUpdate();
         private void formDelete_Load(object sender, EventArgs e)
         {
-            flashCard.datagridCreate(dataGridDELETE);
+            flashCard.datagridCreate(datagridDelete);
         }
         private void veriEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -24,20 +24,20 @@ namespace formsApp
         }
         private void veriGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            formUpdate updateform = new formUpdate();
             updateform.ShowDialog();
         }
         private void tümVerileriGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        formAllData allDataform = new formAllData();
+            formAllData allDataform = new formAllData();
             allDataform.ShowDialog();
         }
         private void listelerimToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        formMyList myListform = new formMyList();
+            formMyList myListform = new formMyList();
             myListform.ShowDialog();
         }
-        #region kutucuklara girlien değerlerin varlığını kontrol eden fonksiyon
-        public int veriVarmi(string maskedTextBox, string column)
+        public int veriVarmi(string maskedTextBox, string column)//kullanıcının girdiği verinın varlığını sorgular.
         {
             SqlCommand komut1 = new SqlCommand("select count(" + column + ") from data_table where " + column + "=@maskedTextBoxValue", flashCard.baglanti());
             komut1.Parameters.AddWithValue("@maskedTextBoxValue", maskedTextBox);
@@ -45,25 +45,26 @@ namespace formsApp
             flashCard.baglanti().Close();
             return result2;
         }
-        #endregion
+        public void deleteData(string column, MaskedTextBox msktxtbox)//veri silme işlemi
+        {
+            SqlCommand komut = new SqlCommand("DELETE FROM data_table WHERE " + column + " = @deger", flashCard.baglanti());
+            komut.Parameters.AddWithValue("@deger", msktxtbox.Text);
+            komut.ExecuteNonQuery();
+            flashCard.baglanti().Close();
+            msktextquesitonindelete.Clear();
+            maskedtextanswerindelete.Clear();
+            maskedtextIdindelete.Clear(); MessageBox.Show("Veri Silinmiştir.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            flashCard.datagridCreate(datagridDelete);
+        }
         private void btnquestionsearchDelete_Click(object sender, EventArgs e)
         {
             string column = "quesiton";
-            int result = veriVarmi(msktextquesitonindelete.Text, column);
-            if (msktextquesitonindelete.Text.Length != 0)
+            int result = veriVarmi(msktextquesitonindelete.Text, column);//veritabanında verinin varlığını kontrol eder
+            if (msktextquesitonindelete.Text.Length != 0)//kutucukta verinin varlığını kontrol eder.
             {
-                if (result != 0)
+                if (result > 0)//>0 olmasının sebebi bir veriden birden fazla olabilir.
                 {
-                    SqlCommand komut2 = new SqlCommand("delete from data_table where quesiton=@sil", flashCard.baglanti());
-                    komut2.Parameters.AddWithValue("@sil", msktextquesitonindelete.Text);
-                    komut2.ExecuteNonQuery();
-                    this.data_tableTableAdapter.Fill(this.enGuncelapplicationDatabaseDataSet.data_table);
-                    msktextquesitonindelete.Clear();
-                    maskedtextanswerindelete.Clear();
-                    maskedtextIdindelete.Clear();
-                    flashCard.baglanti().Close();
-                    flashCard.datagridCreate(dataGridDELETE);
-                    MessageBox.Show("Veri Silinmiştir.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    deleteData(column, msktextquesitonindelete);
                 }
                 else
                 {
@@ -77,21 +78,13 @@ namespace formsApp
         }
         private void btnanswersearchDelete_Click(object sender, EventArgs e)
         {
-            string answer = "answer";
-            int result = veriVarmi(maskedtextanswerindelete.Text, answer);
-            if (maskedtextanswerindelete.Text.Length != 0)
-            { 
+            string column = "answer";
+            int result = veriVarmi(maskedtextanswerindelete.Text, column);//veritabanında verinin varlığını kontrol eder
+            if (maskedtextanswerindelete.Text.Length != 0)//kutucukta verinin varlığını kontrol eder.
+            {
                 if (result != 0)
                 {
-                    SqlCommand komut2 = new SqlCommand("delete from data_table where answer=@sil", flashCard.baglanti());
-                    komut2.Parameters.AddWithValue("@sil", maskedtextanswerindelete.Text);
-                    komut2.ExecuteNonQuery();
-                    msktextquesitonindelete.Clear();
-                    maskedtextanswerindelete.Clear();
-                    maskedtextIdindelete.Clear();
-                    flashCard.baglanti().Close();
-                    MessageBox.Show("Veri Silinmiştir.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    flashCard.datagridCreate(dataGridDELETE);
+                    deleteData(column, maskedtextanswerindelete);
                 }
                 else
                 {
@@ -106,20 +99,12 @@ namespace formsApp
         private void btnsearchidDelete_Click(object sender, EventArgs e)
         {
             string column = "idNumber";
-            int result=veriVarmi(maskedtextIdindelete.Text, column);
-            if (maskedtextIdindelete.Text.Length != 0)
+            int result = veriVarmi(maskedtextIdindelete.Text, column);//veritabanında verinin varlığını kontrol eder
+            if (maskedtextIdindelete.Text.Length != 0)//kutucukta verinin varlığını kontrol eder.
             {
                 if (result != 0)
                 {
-                    SqlCommand komut2 = new SqlCommand("delete from data_table where idnumber=@sil", flashCard.baglanti());
-                    komut2.Parameters.AddWithValue("@sil", maskedtextIdindelete.Text);
-                    komut2.ExecuteNonQuery();
-                    this.data_tableTableAdapter.Fill(this.enGuncelapplicationDatabaseDataSet.data_table);
-                    msktextquesitonindelete.Clear();
-                    maskedtextanswerindelete.Clear();
-                    flashCard.baglanti().Close();
-                    maskedtextIdindelete.Clear(); MessageBox.Show("Veri Silinmiştir.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    flashCard.datagridCreate(dataGridDELETE);
+                    deleteData(column, maskedtextIdindelete);
                 }
                 else
                 {
@@ -131,33 +116,24 @@ namespace formsApp
                 MessageBox.Show("ID Kutucuğu boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //kullanıcı id,soru,cevap kutucuklarından hangisine göre silme işlemi yapacaksa accept buton o olacaktır.
         private void msktextquesitonindelete_MouseClick(object sender, MouseEventArgs e)
         {
-            formDelete.ActiveForm.AcceptButton = btnquestionsearchDelete;
+            formDelete.ActiveForm.AcceptButton = btnquesitonDelete;
         }
         private void maskedtextanswerindelete_MouseClick(object sender, MouseEventArgs e)
         {
-            formDelete.ActiveForm.AcceptButton = btnanswersearchDelete;
+            formDelete.ActiveForm.AcceptButton = btnanswerDelete;
         }
         private void maskedtextIdindelete_MouseClick(object sender, MouseEventArgs e)
         {
-            formDelete.ActiveForm.AcceptButton = btnsearchidDelete ;
-        }
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            msktextquesitonindelete.Clear();
-            maskedtextanswerindelete.Clear();
-            maskedtextIdindelete.Clear();
+            formDelete.ActiveForm.AcceptButton = btnidDelete;
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            flashCard.datagridCellClick(maskedtextIdindelete, msktextquesitonindelete, maskedtextanswerindelete,dataGridDELETE);
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
+            //kullanıcının datagriddeki hücreye çift tıklayınca verilerin textbox lara aktarılmasını sağlar.
+            flashCard.datagridCellClick(maskedtextIdindelete, msktextquesitonindelete, maskedtextanswerindelete, datagridDelete);
         }
     }
-} 
+}
 

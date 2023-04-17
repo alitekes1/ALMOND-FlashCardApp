@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security.Cryptography.X509Certificates;
 
 namespace formsApp
 {
     internal class flashCardClass
     {
         public SqlConnection baglanti()
-        {
+        {//sql için gerekli olan baglanti adresi
             SqlConnection connection = new SqlConnection("Data Source=LAPTOP-VLV4GS76\\SQLKODLAB;Initial Catalog=applicationDatabase;Integrated Security=True");
             connection.Open();
             return connection;
         }
         public void datagridCreate(DataGridView dtgrd)
-        {
-            flashCardClass flashCard=new flashCardClass();
-            SqlDataAdapter da = new SqlDataAdapter("select idNumber,quesiton,answer,listName from data_table where answer IS NOT NULL and quesiton IS NOT  NULL ", flashCard.baglanti());
+        {//datagride verileri oluşturur.
+            flashCardClass flashCard = new flashCardClass();
+            SqlDataAdapter da = new SqlDataAdapter("select idNumber,quesiton,answer,listName from data_table where answer IS NOT NULL order by puan desc", flashCard.baglanti());
             DataSet ds = new DataSet();
             da.Fill(ds);
             dtgrd.DataSource = ds.Tables[0];
@@ -30,11 +24,11 @@ namespace formsApp
             dtgrd.Columns[1].HeaderText = "Soru";
             dtgrd.Columns[2].HeaderText = "Cevap";
             dtgrd.Columns[3].HeaderText = "Liste";
-            dtgrd.RowHeadersVisible = false; //Gizlenmesini sağlar 
+            dtgrd.RowHeadersVisible = false; // data griddeki en sağda bulunan boş sutunun gizlenmesini sağlar 
 
         }
         public void comboboxCreate(ComboBox combobox)
-        {
+        {//sql den combobaxa verileri çeker.
             flashCardClass flashCard = new flashCardClass();
             SqlCommand komut1 = new SqlCommand("select distinct listName from data_table", flashCard.baglanti());
             combobox.DataSource = null;
@@ -47,10 +41,10 @@ namespace formsApp
         }
         public void comboboxRefresh(ComboBox combobox)
         {
-            combobox.Items.Clear();      
+            combobox.Items.Clear();
             comboboxCreate(combobox);
         }
-        public void datagridCellClick(MaskedTextBox maskedId,MaskedTextBox maskedque,MaskedTextBox maskedanswer, DataGridView dataGridView)
+        public void datagridCellClick(MaskedTextBox maskedId, MaskedTextBox maskedque, MaskedTextBox maskedanswer, DataGridView dataGridView)
         {
             //hücreye tıklanınca veriyi ilgili yer aktarır.
             int secilenDeger = dataGridView.SelectedCells[0].RowIndex;

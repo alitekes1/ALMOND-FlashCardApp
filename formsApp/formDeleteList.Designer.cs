@@ -34,12 +34,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxdeleteList = new System.Windows.Forms.ComboBox();
             this.datatableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enGuncelapplicationDatabaseDataSet = new formsApp.enGuncelapplicationDatabaseDataSet();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.data_tableTableAdapter = new formsApp.enGuncelapplicationDatabaseDataSetTableAdapters.data_tableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.datatableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enGuncelapplicationDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -78,12 +75,6 @@
             // datatableBindingSource
             // 
             this.datatableBindingSource.DataMember = "data_table";
-            this.datatableBindingSource.DataSource = this.enGuncelapplicationDatabaseDataSet;
-            // 
-            // enGuncelapplicationDatabaseDataSet
-            // 
-            this.enGuncelapplicationDatabaseDataSet.DataSetName = "enGuncelapplicationDatabaseDataSet";
-            this.enGuncelapplicationDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -106,10 +97,6 @@
             this.label7.TabIndex = 56;
             this.label7.Text = "*Listenin içindeki veriler silinmez sadece liste silinir.";
             // 
-            // data_tableTableAdapter
-            // 
-            this.data_tableTableAdapter.ClearBeforeFill = true;
-            // 
             // formDeleteList
             // 
             this.AcceptButton = this.button1;
@@ -124,12 +111,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.Color.DarkBlue;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formDeleteList";
             this.Text = "Lsite Sil";
             this.Load += new System.EventHandler(this.formDeleteList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datatableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enGuncelapplicationDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,8 +128,8 @@
         private System.Windows.Forms.ComboBox comboBoxdeleteList;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private enGuncelapplicationDatabaseDataSet enGuncelapplicationDatabaseDataSet;
+        //private enGuncelapplicationDatabaseDataSet enGuncelapplicationDatabaseDataSet;
         private System.Windows.Forms.BindingSource datatableBindingSource;
-        private enGuncelapplicationDatabaseDataSetTableAdapters.data_tableTableAdapter data_tableTableAdapter;
+        //private enGuncelapplicationDatabaseDataSetTableAdapters.data_tableTableAdapter data_tableTableAdapter;
     }
 }

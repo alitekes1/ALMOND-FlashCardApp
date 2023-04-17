@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace formsApp
@@ -45,7 +39,7 @@ namespace formsApp
         }
         private void silToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formDeleteList deletelist=new formDeleteList();
+            formDeleteList deletelist = new formDeleteList();
             deletelist.ShowDialog();
         }
     }

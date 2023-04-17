@@ -34,11 +34,13 @@
             // 
             // datagridPuanTable
             // 
+            this.datagridPuanTable.AllowUserToDeleteRows = false;
             this.datagridPuanTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagridPuanTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagridPuanTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datagridPuanTable.Location = new System.Drawing.Point(0, 0);
             this.datagridPuanTable.Name = "datagridPuanTable";
+            this.datagridPuanTable.ReadOnly = true;
             this.datagridPuanTable.RowHeadersWidth = 51;
             this.datagridPuanTable.RowTemplate.Height = 24;
             this.datagridPuanTable.Size = new System.Drawing.Size(452, 633);

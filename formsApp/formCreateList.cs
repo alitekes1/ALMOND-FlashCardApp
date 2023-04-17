@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace formsApp
@@ -20,12 +13,12 @@ namespace formsApp
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textboxCREATEList.Text.Length > 0 )
+            if (textboxCREATEList.Text.Length > 0)
             {
                 Random rnd = new Random();
-                int sayi=rnd.Next(0,1500);
+                int sayi = rnd.Next(0, 1500);
                 SqlCommand komut = new SqlCommand("insert into data_table (listName,idNumber) values (@namelist,@idNo)", flashCard.baglanti());
-                komut.Parameters.AddWithValue("@namelist",textboxCREATEList.Text);
+                komut.Parameters.AddWithValue("@namelist", textboxCREATEList.Text);
                 komut.Parameters.AddWithValue("@idNo", sayi);
                 komut.ExecuteNonQuery();
                 flashCard.baglanti().Close();
@@ -34,7 +27,7 @@ namespace formsApp
             }
             else
             {
-                MessageBox.Show("Liste ismi boş bırakılamaz!","Hata",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Liste ismi boş bırakılamaz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void formCreateList_Load(object sender, EventArgs e)

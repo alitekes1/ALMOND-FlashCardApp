@@ -55,7 +55,6 @@
             this.gösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pDFToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eXCelToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listelerimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tümListelerimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,6 +67,7 @@
             this.çıkışYapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.datagridMain = new System.Windows.Forms.DataGridView();
             this.labelSoruNo = new System.Windows.Forms.Label();
+            this.kısayollarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -250,7 +250,7 @@
             this.labelsoru.AutoSize = true;
             this.labelsoru.BackColor = System.Drawing.Color.Transparent;
             this.labelsoru.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelsoru.Location = new System.Drawing.Point(6, 29);
+            this.labelsoru.Location = new System.Drawing.Point(6, 39);
             this.labelsoru.Name = "labelsoru";
             this.labelsoru.Size = new System.Drawing.Size(103, 18);
             this.labelsoru.TabIndex = 151;
@@ -275,7 +275,7 @@
             this.labelcevap.AutoSize = true;
             this.labelcevap.BackColor = System.Drawing.Color.Transparent;
             this.labelcevap.Font = new System.Drawing.Font("Century Schoolbook", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelcevap.Location = new System.Drawing.Point(4, 38);
+            this.labelcevap.Location = new System.Drawing.Point(5, 43);
             this.labelcevap.Name = "labelcevap";
             this.labelcevap.Size = new System.Drawing.Size(99, 20);
             this.labelcevap.TabIndex = 152;
@@ -312,28 +312,28 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(905, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(905, 30);
             this.menuStrip1.TabIndex = 90;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // veriEkleToolStripMenuItem
             // 
             this.veriEkleToolStripMenuItem.Name = "veriEkleToolStripMenuItem";
-            this.veriEkleToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.veriEkleToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
             this.veriEkleToolStripMenuItem.Text = "Veri Ekle";
             this.veriEkleToolStripMenuItem.Click += new System.EventHandler(this.veriEkleToolStripMenuItem_Click);
             // 
             // veriSilToolStripMenuItem
             // 
             this.veriSilToolStripMenuItem.Name = "veriSilToolStripMenuItem";
-            this.veriSilToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.veriSilToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.veriSilToolStripMenuItem.Text = "Veri Sil";
             this.veriSilToolStripMenuItem.Click += new System.EventHandler(this.veriSilToolStripMenuItem_Click);
             // 
             // verileriGüncelleToolStripMenuItem
             // 
             this.verileriGüncelleToolStripMenuItem.Name = "verileriGüncelleToolStripMenuItem";
-            this.verileriGüncelleToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
+            this.verileriGüncelleToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
             this.verileriGüncelleToolStripMenuItem.Text = "Veri Güncelle";
             this.verileriGüncelleToolStripMenuItem.Click += new System.EventHandler(this.verileriGüncelleToolStripMenuItem_Click);
             // 
@@ -343,7 +343,7 @@
             this.gösterToolStripMenuItem,
             this.indirToolStripMenuItem});
             this.verileriGösterToolStripMenuItem.Name = "verileriGösterToolStripMenuItem";
-            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
+            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.verileriGösterToolStripMenuItem.Text = "Tüm Verileri Göster/İndir";
             // 
             // gösterToolStripMenuItem
@@ -356,8 +356,7 @@
             // indirToolStripMenuItem
             // 
             this.indirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pDFToolStripMenuItem1,
-            this.eXCelToolStripMenuItem1});
+            this.pDFToolStripMenuItem1});
             this.indirToolStripMenuItem.Name = "indirToolStripMenuItem";
             this.indirToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.indirToolStripMenuItem.Text = "İndir";
@@ -365,15 +364,9 @@
             // pDFToolStripMenuItem1
             // 
             this.pDFToolStripMenuItem1.Name = "pDFToolStripMenuItem1";
-            this.pDFToolStripMenuItem1.Size = new System.Drawing.Size(133, 26);
+            this.pDFToolStripMenuItem1.Size = new System.Drawing.Size(118, 26);
             this.pDFToolStripMenuItem1.Text = "PDF";
             this.pDFToolStripMenuItem1.Click += new System.EventHandler(this.pDFToolStripMenuItem1_Click);
-            // 
-            // eXCelToolStripMenuItem1
-            // 
-            this.eXCelToolStripMenuItem1.Name = "eXCelToolStripMenuItem1";
-            this.eXCelToolStripMenuItem1.Size = new System.Drawing.Size(133, 26);
-            this.eXCelToolStripMenuItem1.Text = "EXCEL";
             // 
             // listelerimToolStripMenuItem
             // 
@@ -381,7 +374,7 @@
             this.tümListelerimToolStripMenuItem,
             this.listeİşlemleriToolStripMenuItem});
             this.listelerimToolStripMenuItem.Name = "listelerimToolStripMenuItem";
-            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.listelerimToolStripMenuItem.Text = "Liste Gör/Ekle/Sil";
             // 
             // tümListelerimToolStripMenuItem
@@ -417,7 +410,7 @@
             // enÇokToolStripMenuItem
             // 
             this.enÇokToolStripMenuItem.Name = "enÇokToolStripMenuItem";
-            this.enÇokToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
+            this.enÇokToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
             this.enÇokToolStripMenuItem.Text = "Puan Tablosu";
             this.enÇokToolStripMenuItem.Click += new System.EventHandler(this.enÇokToolStripMenuItem_Click);
             // 
@@ -425,9 +418,10 @@
             // 
             this.iletişimToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bilgiAlmakİçinToolStripMenuItem,
-            this.projeÖzetiVeÇıkarılanDerslerToolStripMenuItem});
+            this.projeÖzetiVeÇıkarılanDerslerToolStripMenuItem,
+            this.kısayollarToolStripMenuItem});
             this.iletişimToolStripMenuItem.Name = "iletişimToolStripMenuItem";
-            this.iletişimToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.iletişimToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.iletişimToolStripMenuItem.Text = "İletişim ";
             // 
             // bilgiAlmakİçinToolStripMenuItem
@@ -447,7 +441,7 @@
             // çıkışYapToolStripMenuItem
             // 
             this.çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(81, 26);
             this.çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             this.çıkışYapToolStripMenuItem.Click += new System.EventHandler(this.çıkışYapToolStripMenuItem_Click);
             // 
@@ -471,6 +465,13 @@
             this.labelSoruNo.TabIndex = 153;
             this.labelSoruNo.Text = "label2";
             // 
+            // kısayollarToolStripMenuItem
+            // 
+            this.kısayollarToolStripMenuItem.Name = "kısayollarToolStripMenuItem";
+            this.kısayollarToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.kısayollarToolStripMenuItem.Text = "Kısayollar";
+            this.kısayollarToolStripMenuItem.Click += new System.EventHandler(this.kısayollarToolStripMenuItem_Click);
+            // 
             // FormMainpage
             // 
             this.AcceptButton = this.btnshowanswerMain;
@@ -485,13 +486,16 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "FormMainpage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almond";
             this.Load += new System.EventHandler(this.FormMainpage_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMainpage_KeyDown_1);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -525,7 +529,6 @@
         private System.Windows.Forms.ToolStripMenuItem gösterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem indirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem eXCelToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem enÇokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iletişimToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bilgiAlmakİçinToolStripMenuItem;
@@ -547,6 +550,7 @@
         private System.Windows.Forms.Label labelSoruNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem projeÖzetiVeÇıkarılanDerslerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kısayollarToolStripMenuItem;
     }
 }
 

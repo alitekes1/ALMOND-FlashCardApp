@@ -38,29 +38,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnsearchidDelete = new System.Windows.Forms.Button();
-            this.btnanswersearchDelete = new System.Windows.Forms.Button();
-            this.btnquestionsearchDelete = new System.Windows.Forms.Button();
+            this.btnidDelete = new System.Windows.Forms.Button();
+            this.btnanswerDelete = new System.Windows.Forms.Button();
+            this.btnquesitonDelete = new System.Windows.Forms.Button();
             this.veriEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.veriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tümVerileriGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listelerimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dataGridDELETE = new System.Windows.Forms.DataGridView();
-            this.idNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quesitonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.answerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.listNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soruNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datagridDelete = new System.Windows.Forms.DataGridView();
             this.datatableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.enGuncelapplicationDatabaseDataSet = new formsApp.enGuncelapplicationDatabaseDataSet();
-            this.data_tableTableAdapter = new formsApp.enGuncelapplicationDatabaseDataSetTableAdapters.data_tableTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDELETE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datatableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enGuncelapplicationDatabaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // maskedtextIdindelete
@@ -131,9 +123,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnsearchidDelete);
-            this.groupBox1.Controls.Add(this.btnanswersearchDelete);
-            this.groupBox1.Controls.Add(this.btnquestionsearchDelete);
+            this.groupBox1.Controls.Add(this.btnidDelete);
+            this.groupBox1.Controls.Add(this.btnanswerDelete);
+            this.groupBox1.Controls.Add(this.btnquesitonDelete);
             this.groupBox1.Controls.Add(this.maskedtextIdindelete);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.maskedtextanswerindelete);
@@ -147,43 +139,42 @@
             this.groupBox1.Size = new System.Drawing.Size(429, 191);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnsearchidDelete
+            // btnidDelete
             // 
-            this.btnsearchidDelete.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnsearchidDelete.Location = new System.Drawing.Point(331, 149);
-            this.btnsearchidDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnsearchidDelete.Name = "btnsearchidDelete";
-            this.btnsearchidDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnsearchidDelete.TabIndex = 6;
-            this.btnsearchidDelete.Text = "Sil";
-            this.btnsearchidDelete.UseVisualStyleBackColor = false;
-            this.btnsearchidDelete.Click += new System.EventHandler(this.btnsearchidDelete_Click);
+            this.btnidDelete.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnidDelete.Location = new System.Drawing.Point(331, 149);
+            this.btnidDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnidDelete.Name = "btnidDelete";
+            this.btnidDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnidDelete.TabIndex = 6;
+            this.btnidDelete.Text = "Sil";
+            this.btnidDelete.UseVisualStyleBackColor = false;
+            this.btnidDelete.Click += new System.EventHandler(this.btnsearchidDelete_Click);
             // 
-            // btnanswersearchDelete
+            // btnanswerDelete
             // 
-            this.btnanswersearchDelete.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnanswersearchDelete.Location = new System.Drawing.Point(331, 92);
-            this.btnanswersearchDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnanswersearchDelete.Name = "btnanswersearchDelete";
-            this.btnanswersearchDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnanswersearchDelete.TabIndex = 4;
-            this.btnanswersearchDelete.Text = "Sil";
-            this.btnanswersearchDelete.UseVisualStyleBackColor = false;
-            this.btnanswersearchDelete.Click += new System.EventHandler(this.btnanswersearchDelete_Click);
+            this.btnanswerDelete.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnanswerDelete.Location = new System.Drawing.Point(331, 92);
+            this.btnanswerDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnanswerDelete.Name = "btnanswerDelete";
+            this.btnanswerDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnanswerDelete.TabIndex = 4;
+            this.btnanswerDelete.Text = "Sil";
+            this.btnanswerDelete.UseVisualStyleBackColor = false;
+            this.btnanswerDelete.Click += new System.EventHandler(this.btnanswersearchDelete_Click);
             // 
-            // btnquestionsearchDelete
+            // btnquesitonDelete
             // 
-            this.btnquestionsearchDelete.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnquestionsearchDelete.Location = new System.Drawing.Point(331, 32);
-            this.btnquestionsearchDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnquestionsearchDelete.Name = "btnquestionsearchDelete";
-            this.btnquestionsearchDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnquestionsearchDelete.TabIndex = 2;
-            this.btnquestionsearchDelete.Text = "Sil";
-            this.btnquestionsearchDelete.UseVisualStyleBackColor = false;
-            this.btnquestionsearchDelete.Click += new System.EventHandler(this.btnquestionsearchDelete_Click);
+            this.btnquesitonDelete.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnquesitonDelete.Location = new System.Drawing.Point(331, 32);
+            this.btnquesitonDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnquesitonDelete.Name = "btnquesitonDelete";
+            this.btnquesitonDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnquesitonDelete.TabIndex = 2;
+            this.btnquesitonDelete.Text = "Sil";
+            this.btnquesitonDelete.UseVisualStyleBackColor = false;
+            this.btnquesitonDelete.Click += new System.EventHandler(this.btnquestionsearchDelete_Click);
             // 
             // veriEkleToolStripMenuItem
             // 
@@ -228,83 +219,23 @@
             this.menuStrip1.TabIndex = 96;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dataGridDELETE
+            // datagridDelete
             // 
-            this.dataGridDELETE.AllowUserToDeleteRows = false;
-            this.dataGridDELETE.AutoGenerateColumns = false;
-            this.dataGridDELETE.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridDELETE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDELETE.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idNumberDataGridViewTextBoxColumn,
-            this.quesitonDataGridViewTextBoxColumn,
-            this.answerDataGridViewTextBoxColumn,
-            this.listNameDataGridViewTextBoxColumn,
-            this.soruNoDataGridViewTextBoxColumn});
-            this.dataGridDELETE.DataSource = this.datatableBindingSource;
-            this.dataGridDELETE.Location = new System.Drawing.Point(13, 256);
-            this.dataGridDELETE.Name = "dataGridDELETE";
-            this.dataGridDELETE.ReadOnly = true;
-            this.dataGridDELETE.RowHeadersWidth = 51;
-            this.dataGridDELETE.RowTemplate.Height = 24;
-            this.dataGridDELETE.Size = new System.Drawing.Size(427, 325);
-            this.dataGridDELETE.TabIndex = 97;
-            this.dataGridDELETE.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // idNumberDataGridViewTextBoxColumn
-            // 
-            this.idNumberDataGridViewTextBoxColumn.DataPropertyName = "idNumber";
-            this.idNumberDataGridViewTextBoxColumn.HeaderText = "ID No";
-            this.idNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idNumberDataGridViewTextBoxColumn.Name = "idNumberDataGridViewTextBoxColumn";
-            this.idNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quesitonDataGridViewTextBoxColumn
-            // 
-            this.quesitonDataGridViewTextBoxColumn.DataPropertyName = "quesiton";
-            this.quesitonDataGridViewTextBoxColumn.HeaderText = "Soru";
-            this.quesitonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quesitonDataGridViewTextBoxColumn.Name = "quesitonDataGridViewTextBoxColumn";
-            this.quesitonDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // answerDataGridViewTextBoxColumn
-            // 
-            this.answerDataGridViewTextBoxColumn.DataPropertyName = "answer";
-            this.answerDataGridViewTextBoxColumn.HeaderText = "Cevap";
-            this.answerDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.answerDataGridViewTextBoxColumn.Name = "answerDataGridViewTextBoxColumn";
-            this.answerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // listNameDataGridViewTextBoxColumn
-            // 
-            this.listNameDataGridViewTextBoxColumn.DataPropertyName = "listName";
-            this.listNameDataGridViewTextBoxColumn.HeaderText = "listName";
-            this.listNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.listNameDataGridViewTextBoxColumn.Name = "listNameDataGridViewTextBoxColumn";
-            this.listNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.listNameDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // soruNoDataGridViewTextBoxColumn
-            // 
-            this.soruNoDataGridViewTextBoxColumn.DataPropertyName = "soruNo";
-            this.soruNoDataGridViewTextBoxColumn.HeaderText = "soruNo";
-            this.soruNoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.soruNoDataGridViewTextBoxColumn.Name = "soruNoDataGridViewTextBoxColumn";
-            this.soruNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.soruNoDataGridViewTextBoxColumn.Visible = false;
+            this.datagridDelete.AllowUserToDeleteRows = false;
+            this.datagridDelete.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datagridDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridDelete.Location = new System.Drawing.Point(13, 256);
+            this.datagridDelete.Name = "datagridDelete";
+            this.datagridDelete.ReadOnly = true;
+            this.datagridDelete.RowHeadersWidth = 51;
+            this.datagridDelete.RowTemplate.Height = 24;
+            this.datagridDelete.Size = new System.Drawing.Size(427, 325);
+            this.datagridDelete.TabIndex = 97;
+            this.datagridDelete.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // datatableBindingSource
             // 
             this.datatableBindingSource.DataMember = "data_table";
-            this.datatableBindingSource.DataSource = this.enGuncelapplicationDatabaseDataSet;
-            // 
-            // enGuncelapplicationDatabaseDataSet
-            // 
-            this.enGuncelapplicationDatabaseDataSet.DataSetName = "enGuncelapplicationDatabaseDataSet";
-            this.enGuncelapplicationDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // data_tableTableAdapter
-            // 
-            this.data_tableTableAdapter.ClearBeforeFill = true;
             // 
             // label7
             // 
@@ -319,16 +250,17 @@
             // 
             // formDelete
             // 
-            this.AcceptButton = this.btnquestionsearchDelete;
+            this.AcceptButton = this.btnquesitonDelete;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(452, 633);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridDELETE);
+            this.Controls.Add(this.datagridDelete);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -341,9 +273,8 @@
             this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDELETE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datatableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enGuncelapplicationDatabaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,18 +289,18 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnquestionsearchDelete;
-        private System.Windows.Forms.Button btnsearchidDelete;
-        private System.Windows.Forms.Button btnanswersearchDelete;
+        private System.Windows.Forms.Button btnquesitonDelete;
+        private System.Windows.Forms.Button btnidDelete;
+        private System.Windows.Forms.Button btnanswerDelete;
         private System.Windows.Forms.ToolStripMenuItem veriEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem veriGüncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tümVerileriGösterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listelerimToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.DataGridView dataGridDELETE;
-        private enGuncelapplicationDatabaseDataSet enGuncelapplicationDatabaseDataSet;
+        private System.Windows.Forms.DataGridView datagridDelete;
+   //     private enGuncelapplicationDatabaseDataSet enGuncelapplicationDatabaseDataSet;
         private System.Windows.Forms.BindingSource datatableBindingSource;
-        private enGuncelapplicationDatabaseDataSetTableAdapters.data_tableTableAdapter data_tableTableAdapter;
+   //     private enGuncelapplicationDatabaseDataSetTableAdapters.data_tableTableAdapter data_tableTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quesitonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn answerDataGridViewTextBoxColumn;

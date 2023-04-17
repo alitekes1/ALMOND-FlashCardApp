@@ -191,7 +191,8 @@
             this.combochooselistUpdate.Size = new System.Drawing.Size(303, 24);
             this.combochooselistUpdate.TabIndex = 9;
             this.combochooselistUpdate.ValueMember = "listName";
-            this.combochooselistUpdate.SelectedIndexChanged += new System.EventHandler(this.combochooselistUpdate_SelectedIndexChanged);
+            //this.combochooselistUpdate.SelectedIndexChanged += new System.EventHandler(this.combochooselistUpdate_SelectedIndexChanged);
+            this.combochooselistUpdate.MouseClick += new System.Windows.Forms.MouseEventHandler(this.combochooselistUpdate_MouseClick);
             // 
             // btnvazgecinUpdate
             // 
@@ -261,11 +262,12 @@
             this.dataGridUPDATE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridUPDATE.Location = new System.Drawing.Point(13, 326);
             this.dataGridUPDATE.Name = "dataGridUPDATE";
+            this.dataGridUPDATE.ReadOnly = true;
             this.dataGridUPDATE.RowHeadersWidth = 51;
             this.dataGridUPDATE.RowTemplate.Height = 24;
             this.dataGridUPDATE.Size = new System.Drawing.Size(432, 200);
             this.dataGridUPDATE.TabIndex = 113;
-            this.dataGridUPDATE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUPDATE_CellContentClick);
+            //this.dataGridUPDATE.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUPDATE_CellContentClick);
             this.dataGridUPDATE.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUPDATE_CellDoubleClick);
             // 
             // formUpdate
@@ -274,7 +276,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(457, 680);
+            this.ClientSize = new System.Drawing.Size(457, 678);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridUPDATE);
             this.Controls.Add(this.label7);
@@ -289,6 +291,7 @@
             this.Controls.Add(this.labelsoruupdate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "formUpdate";

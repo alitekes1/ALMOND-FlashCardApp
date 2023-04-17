@@ -6,13 +6,14 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C12B902E-71A2-4122-80C4-E256BE344E86}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>formsApp</RootNamespace>
+    <RootNamespace>Almond</RootNamespace>
     <AssemblyName>formsApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ALİ\Bilgisayar Mühendisliği\MyApp\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,15 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <UpdateUrl>http://localhost/formsApp/</UpdateUrl>
+    <ProductName>AlmondApp</ProductName>
+    <PublisherName>Ali Tekeş</PublisherName>
+    <SuiteName>almond</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -47,6 +53,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9ABD04C7A92F935607659B3BE0A7609356F2DF85</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>formsApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>almond-low-resolution-logo-color-on-transparent-background.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>formsApp.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,11 +88,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="applicationDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>applicationDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="enGuncelapplicationDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,10 +156,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sonapplicationDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>sonapplicationDatabaseDataSet.xsd</DependentUpon>
+    <Compile Include="formShortCuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formShortCuts.Designer.cs">
+      <DependentUpon>formShortCuts.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="formCreateList.resx">
       <DependentUpon>formCreateList.cs</DependentUpon>
@@ -168,6 +188,9 @@
     <EmbeddedResource Include="formPuanTable.resx">
       <DependentUpon>formPuanTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formShortCuts.resx">
+      <DependentUpon>formShortCuts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formUpdate.resx">
       <DependentUpon>formUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,18 +211,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="applicationDatabaseDataSet.xsc">
-      <DependentUpon>applicationDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="applicationDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>applicationDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="applicationDatabaseDataSet.xss">
-      <DependentUpon>applicationDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="enGuncelapplicationDatabaseDataSet.xsc">
       <DependentUpon>enGuncelapplicationDatabaseDataSet.xsd</DependentUpon>
     </None>
@@ -221,17 +234,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="sonapplicationDatabaseDataSet.xsc">
-      <DependentUpon>sonapplicationDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="sonapplicationDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>sonapplicationDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="sonapplicationDatabaseDataSet.xss">
-      <DependentUpon>sonapplicationDatabaseDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -247,6 +249,9 @@
       <ProductName>.NET Framework 3.5 SP1 </ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="almond-low-resolution-logo-color-on-transparent-background.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

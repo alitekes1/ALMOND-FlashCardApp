@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace formsApp.Properties {
+namespace Almond.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
