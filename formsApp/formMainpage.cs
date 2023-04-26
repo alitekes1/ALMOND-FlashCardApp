@@ -262,7 +262,7 @@ namespace formsApp
             }
             if (e.KeyCode == Keys.NumPad3)
             {
-                btnpuan3.PerformClick();
+                butonpuan3.PerformClick();
             }
             if (e.KeyCode == Keys.NumPad4)
             {
@@ -271,6 +271,10 @@ namespace formsApp
             if (e.KeyCode == Keys.NumPad5)
             {
                 btnpuan5.PerformClick();
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnshowanswerMain.PerformClick();
             }
             // form kısayolları
             if (e.Control && e.KeyCode == Keys.A)
@@ -302,6 +306,7 @@ namespace formsApp
             {
                 Application.Exit();
             }
+
         }
         private void kısayollarToolStripMenuItem_Click(object sender, EventArgs e)
         {
