@@ -40,7 +40,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboboxlisteMain = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelsoru = new System.Windows.Forms.Label();
@@ -174,7 +173,6 @@
             this.groupBox1.BackColor = System.Drawing.Color.CadetBlue;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboboxlisteMain);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -203,7 +201,7 @@
             this.comboboxlisteMain.DisplayMember = "listName";
             this.comboboxlisteMain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxlisteMain.FormattingEnabled = true;
-            this.comboboxlisteMain.Location = new System.Drawing.Point(651, 44);
+            this.comboboxlisteMain.Location = new System.Drawing.Point(654, 32);
             this.comboboxlisteMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboboxlisteMain.MaxDropDownItems = 4;
             this.comboboxlisteMain.Name = "comboboxlisteMain";
@@ -214,20 +212,10 @@
             this.comboboxlisteMain.SelectedIndexChanged += new System.EventHandler(this.comboboxlisteMain_SelectedIndexChanged);
             this.comboboxlisteMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboboxlisteMain_MouseClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(219, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 23);
-            this.label2.TabIndex = 121;
-            this.label2.Text = "v1.0";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(579, 48);
+            this.label3.Location = new System.Drawing.Point(582, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 121;
@@ -548,7 +536,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button butonpuan3;
         private System.Windows.Forms.Label labelSoruNo;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem projeÖzetiVeÇıkarılanDerslerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kısayollarToolStripMenuItem;
     }

@@ -21,6 +21,7 @@ namespace formsApp
             dtgrd.DataSource = ds.Tables[0];
             flashCard.baglanti().Close();
             dtgrd.Columns[0].HeaderText = "ID Number";
+            dtgrd.Columns[0].Visible = false;
             dtgrd.Columns[1].HeaderText = "Soru";
             dtgrd.Columns[2].HeaderText = "Cevap";
             dtgrd.Columns[3].HeaderText = "Liste";

@@ -113,6 +113,7 @@ namespace formsApp
         }
         private void showCard()
         {
+            
             labelcevap.Visible = false;
             ///soruyu ekrana yazdırma
             if (i < datagridMain.Rows.Count - 1)//datagridin son satırına gelene kadar git ve hücreyi labela aktar
