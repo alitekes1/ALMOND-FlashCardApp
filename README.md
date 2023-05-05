@@ -15,10 +15,11 @@ Tanımları ve açıklamaları hatırlayarak bilgiyi öğrenebilirler.Hatırlama
 Puanladığı kartları tekrar gözden geçirebilirler. Öğrenciler, öğretmenler, dil öğrenenler ve herhangi bir konuda
 öğrenmek isteyenler için faydalı bir araçtır.
 
+
 ![image](https://user-images.githubusercontent.com/112067233/229801977-2282fe80-5304-4117-943e-13473a69293c.png)
-![image](https://user-images.githubusercontent.com/112067233/229805743-4ec5e74f-26aa-4c44-b63d-fc5f35e6e1cb.png)
-![image](https://user-images.githubusercontent.com/112067233/229802136-e9dd7139-38c1-411c-b578-31bd70c676ff.png)
-![image](https://user-images.githubusercontent.com/112067233/229803364-4dd52718-7ae7-4c77-8d3a-24351bb63d55.png)
+![image](https://user-images.githubusercontent.com/112067233/236503321-c8fbd819-0103-4722-ac1e-cd6199e825c6.png)
+![image](https://user-images.githubusercontent.com/112067233/236503307-f960c7b0-e320-4d94-9dbe-00b18ceabb6d.png)
+![image](https://user-images.githubusercontent.com/112067233/236503291-12f04f84-d4cc-4fae-97f0-49d9da7ee87e.png)
 ![image](https://user-images.githubusercontent.com/112067233/229802184-fc40fa56-57ae-4b4e-8f3c-cfd117faa2ca.png)
 ![image](https://user-images.githubusercontent.com/112067233/229802157-669d4e93-ee40-463c-a459-06b03b0183c8.png)
 ![image](https://user-images.githubusercontent.com/112067233/229802201-75c3ad58-32dc-4bd5-98d9-5ad9663da5c0.png)
