@@ -303,28 +303,28 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(1470, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(906, 28);
             this.menuStrip1.TabIndex = 90;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // veriEkleToolStripMenuItem
             // 
             this.veriEkleToolStripMenuItem.Name = "veriEkleToolStripMenuItem";
-            this.veriEkleToolStripMenuItem.Size = new System.Drawing.Size(79, 26);
+            this.veriEkleToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.veriEkleToolStripMenuItem.Text = "Veri Ekle";
             this.veriEkleToolStripMenuItem.Click += new System.EventHandler(this.veriEkleToolStripMenuItem_Click);
             // 
             // veriSilToolStripMenuItem
             // 
             this.veriSilToolStripMenuItem.Name = "veriSilToolStripMenuItem";
-            this.veriSilToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
+            this.veriSilToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.veriSilToolStripMenuItem.Text = "Veri Sil";
             this.veriSilToolStripMenuItem.Click += new System.EventHandler(this.veriSilToolStripMenuItem_Click);
             // 
             // verileriGüncelleToolStripMenuItem
             // 
             this.verileriGüncelleToolStripMenuItem.Name = "verileriGüncelleToolStripMenuItem";
-            this.verileriGüncelleToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
+            this.verileriGüncelleToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.verileriGüncelleToolStripMenuItem.Text = "Veri Güncelle";
             this.verileriGüncelleToolStripMenuItem.Click += new System.EventHandler(this.verileriGüncelleToolStripMenuItem_Click);
             // 
@@ -334,7 +334,7 @@
             this.gösterToolStripMenuItem,
             this.indirToolStripMenuItem});
             this.verileriGösterToolStripMenuItem.Name = "verileriGösterToolStripMenuItem";
-            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(185, 24);
             this.verileriGösterToolStripMenuItem.Text = "Tüm Verileri Göster/İndir";
             // 
             // gösterToolStripMenuItem
@@ -366,7 +366,7 @@
             this.tümListelerimToolStripMenuItem,
             this.listeİşlemleriToolStripMenuItem});
             this.listelerimToolStripMenuItem.Name = "listelerimToolStripMenuItem";
-            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.listelerimToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.listelerimToolStripMenuItem.Text = "Liste Gör/Ekle/Sil";
             // 
             // tümListelerimToolStripMenuItem
@@ -402,7 +402,7 @@
             // enÇokToolStripMenuItem
             // 
             this.enÇokToolStripMenuItem.Name = "enÇokToolStripMenuItem";
-            this.enÇokToolStripMenuItem.Size = new System.Drawing.Size(109, 26);
+            this.enÇokToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
             this.enÇokToolStripMenuItem.Text = "Puan Tablosu";
             this.enÇokToolStripMenuItem.Click += new System.EventHandler(this.enÇokToolStripMenuItem_Click);
             // 
@@ -413,7 +413,7 @@
             this.projeÖzetiVeÇıkarılanDerslerToolStripMenuItem,
             this.kısayollarToolStripMenuItem});
             this.iletişimToolStripMenuItem.Name = "iletişimToolStripMenuItem";
-            this.iletişimToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.iletişimToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.iletişimToolStripMenuItem.Text = "İletişim ";
             // 
             // bilgiAlmakİçinToolStripMenuItem
@@ -440,7 +440,7 @@
             // çıkışYapToolStripMenuItem
             // 
             this.çıkışYapToolStripMenuItem.Name = "çıkışYapToolStripMenuItem";
-            this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(81, 26);
+            this.çıkışYapToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.çıkışYapToolStripMenuItem.Text = "Çıkış Yap";
             this.çıkışYapToolStripMenuItem.Click += new System.EventHandler(this.çıkışYapToolStripMenuItem_Click);
             // 
@@ -482,7 +482,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1470, 453);
+            this.ClientSize = new System.Drawing.Size(906, 453);
             this.Controls.Add(this.datagridPDF);
             this.Controls.Add(this.labelSoruNo);
             this.Controls.Add(this.groupBox3);
