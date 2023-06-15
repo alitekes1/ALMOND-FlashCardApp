@@ -12,7 +12,7 @@ namespace formsApp
         flashCardClass flashCard = new flashCardClass();
         private void formAllData_Load(object sender, EventArgs e)
         {
-            flashCard.datagridCreate(datagridAllData);
+            flashCard.datagridCreatewithID(datagridAllData);
         }
         private void tümVerileriGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {

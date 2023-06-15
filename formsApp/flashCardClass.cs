@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace formsApp
 {
-    internal class flashCardClass
+    public class flashCardClass
     {
         public SqlConnection baglanti()
         {//sql için gerekli olan baglanti adresi
@@ -26,7 +26,20 @@ namespace formsApp
             dtgrd.Columns[2].HeaderText = "Cevap";
             dtgrd.Columns[3].HeaderText = "Liste";
             dtgrd.RowHeadersVisible = false; // data griddeki en sağda bulunan boş sutunun gizlenmesini sağlar 
-
+        }
+        public void datagridCreatewithID(DataGridView dtgrd)
+        {
+            flashCardClass flashCard = new flashCardClass();
+            SqlDataAdapter da = new SqlDataAdapter("select idNumber,quesiton,answer,listName from data_table where answer IS NOT NULL order by puan desc", flashCard.baglanti());
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dtgrd.DataSource = ds.Tables[0];
+            flashCard.baglanti().Close();
+            dtgrd.Columns[0].HeaderText = "ID Number";
+            dtgrd.Columns[1].HeaderText = "Soru";
+            dtgrd.Columns[2].HeaderText = "Cevap";
+            dtgrd.Columns[3].HeaderText = "Liste";
+            dtgrd.RowHeadersVisible = false; // data griddeki en sağda bulunan boş sutunun gizlenmesini sağlar 
         }
         public void comboboxCreate(ComboBox combobox)
         {//sql den combobaxa verileri çeker.

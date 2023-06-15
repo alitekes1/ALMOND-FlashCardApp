@@ -33,7 +33,7 @@ namespace formsApp
         }
         private void formUpdate_Load(object sender, EventArgs e)
         {
-            flashCard.datagridCreate(dataGridUPDATE);
+            flashCard.datagridCreatewithID(dataGridUPDATE);
             flashCard.comboboxCreate(combochooselistUpdate);
             textboxanswerUpdate.Clear();
             textboxquestionUpdate.Clear();
@@ -100,7 +100,7 @@ namespace formsApp
                     komut1.Parameters.AddWithValue("@liste", combochooselistUpdate.Text);
                     komut1.ExecuteNonQuery();
                     flashCard.baglanti().Close();
-                    flashCard.datagridCreate(dataGridUPDATE);//datagridin güncelliğini korumak için tekrar datagridi oluşturma fonksiyonu
+                    flashCard.datagridCreatewithID(dataGridUPDATE);//datagridin güncelliğini korumak için tekrar datagridi oluşturma fonksiyonu
                     MessageBox.Show("Veri Güncellenmiştir.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else

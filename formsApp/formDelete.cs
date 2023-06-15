@@ -15,7 +15,7 @@ namespace formsApp
         flashCardClass flashCard = new flashCardClass();
         private void formDelete_Load(object sender, EventArgs e)
         {
-            flashCard.datagridCreate(datagridDelete);
+            flashCard.datagridCreatewithID(datagridDelete);
         }
         private void veriEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -54,7 +54,7 @@ namespace formsApp
             msktextquesitonindelete.Clear();
             maskedtextanswerindelete.Clear();
             maskedtextIdindelete.Clear(); MessageBox.Show("Veri Silinmiştir.", "İşlem Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            flashCard.datagridCreate(datagridDelete);
+            flashCard.datagridCreatewithID(datagridDelete);
         }
         private void btnquestionsearchDelete_Click(object sender, EventArgs e)
         {

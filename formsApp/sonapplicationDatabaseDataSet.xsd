@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="applicationDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="applicationDatabaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.formsApp.Properties.Settings.GlobalReference.Default.applicationDatabaseConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="applicationDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="applicationDatabaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Almond.Properties.Settings.GlobalReference.Default.applicationDatabaseConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="data_tableTableAdapter" GeneratorDataComponentClassName="data_tableTableAdapter" Name="data_table" UserDataComponentName="data_tableTableAdapter">
@@ -66,21 +66,21 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="sonapplicationDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="sonapplicationDatabaseDataSet" msprop:Generator_DataSetName="sonapplicationDatabaseDataSet">
+  <xs:element name="sonapplicationDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="sonapplicationDatabaseDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="sonapplicationDatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="data_table" msprop:Generator_RowEvHandlerName="data_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="data_tableRowDeleted" msprop:Generator_RowDeletingName="data_tableRowDeleting" msprop:Generator_RowEvArgName="data_tableRowChangeEvent" msprop:Generator_TablePropName="data_table" msprop:Generator_RowChangedName="data_tableRowChanged" msprop:Generator_RowChangingName="data_tableRowChanging" msprop:Generator_TableClassName="data_tableDataTable" msprop:Generator_RowClassName="data_tableRow" msprop:Generator_TableVarName="tabledata_table" msprop:Generator_UserTableName="data_table">
+        <xs:element name="data_table" msprop:Generator_RowClassName="data_tableRow" msprop:Generator_RowEvHandlerName="data_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="data_tableRowDeleted" msprop:Generator_RowDeletingName="data_tableRowDeleting" msprop:Generator_RowEvArgName="data_tableRowChangeEvent" msprop:Generator_TablePropName="data_table" msprop:Generator_RowChangedName="data_tableRowChanged" msprop:Generator_UserTableName="data_table" msprop:Generator_RowChangingName="data_tableRowChanging" msprop:Generator_TableClassName="data_tableDataTable" msprop:Generator_TableVarName="tabledata_table">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idNumber" msprop:Generator_ColumnPropNameInRow="idNumber" msprop:Generator_ColumnPropNameInTable="idNumberColumn" msprop:Generator_ColumnVarNameInTable="columnidNumber" msprop:Generator_UserColumnName="idNumber" type="xs:int" minOccurs="0" />
-              <xs:element name="quesiton" msprop:Generator_ColumnPropNameInRow="quesiton" msprop:Generator_ColumnPropNameInTable="quesitonColumn" msprop:Generator_ColumnVarNameInTable="columnquesiton" msprop:Generator_UserColumnName="quesiton" minOccurs="0">
+              <xs:element name="idNumber" msprop:Generator_UserColumnName="idNumber" msprop:Generator_ColumnPropNameInTable="idNumberColumn" msprop:Generator_ColumnPropNameInRow="idNumber" msprop:Generator_ColumnVarNameInTable="columnidNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="quesiton" msprop:Generator_UserColumnName="quesiton" msprop:Generator_ColumnPropNameInTable="quesitonColumn" msprop:Generator_ColumnPropNameInRow="quesiton" msprop:Generator_ColumnVarNameInTable="columnquesiton" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="answer" msprop:Generator_ColumnPropNameInRow="answer" msprop:Generator_ColumnPropNameInTable="answerColumn" msprop:Generator_ColumnVarNameInTable="columnanswer" msprop:Generator_UserColumnName="answer" minOccurs="0">
+              <xs:element name="answer" msprop:Generator_UserColumnName="answer" msprop:Generator_ColumnPropNameInTable="answerColumn" msprop:Generator_ColumnPropNameInRow="answer" msprop:Generator_ColumnVarNameInTable="columnanswer" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
@@ -90,17 +90,17 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="list_table" msprop:Generator_RowEvHandlerName="list_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="list_tableRowDeleted" msprop:Generator_RowDeletingName="list_tableRowDeleting" msprop:Generator_RowEvArgName="list_tableRowChangeEvent" msprop:Generator_TablePropName="list_table" msprop:Generator_RowChangedName="list_tableRowChanged" msprop:Generator_RowChangingName="list_tableRowChanging" msprop:Generator_TableClassName="list_tableDataTable" msprop:Generator_RowClassName="list_tableRow" msprop:Generator_TableVarName="tablelist_table" msprop:Generator_UserTableName="list_table">
+        <xs:element name="list_table" msprop:Generator_RowClassName="list_tableRow" msprop:Generator_RowEvHandlerName="list_tableRowChangeEventHandler" msprop:Generator_RowDeletedName="list_tableRowDeleted" msprop:Generator_RowDeletingName="list_tableRowDeleting" msprop:Generator_RowEvArgName="list_tableRowChangeEvent" msprop:Generator_TablePropName="list_table" msprop:Generator_RowChangedName="list_tableRowChanged" msprop:Generator_UserTableName="list_table" msprop:Generator_RowChangingName="list_tableRowChanging" msprop:Generator_TableClassName="list_tableDataTable" msprop:Generator_TableVarName="tablelist_table">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="listName" msprop:Generator_ColumnPropNameInRow="listName" msprop:Generator_ColumnPropNameInTable="listNameColumn" msprop:Generator_ColumnVarNameInTable="columnlistName" msprop:Generator_UserColumnName="listName" minOccurs="0">
+              <xs:element name="listName" msprop:Generator_UserColumnName="listName" msprop:Generator_ColumnPropNameInTable="listNameColumn" msprop:Generator_ColumnPropNameInRow="listName" msprop:Generator_ColumnVarNameInTable="columnlistName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="listId" msprop:Generator_ColumnPropNameInRow="listId" msprop:Generator_ColumnPropNameInTable="listIdColumn" msprop:Generator_ColumnVarNameInTable="columnlistId" msprop:Generator_UserColumnName="listId" type="xs:int" minOccurs="0" />
+              <xs:element name="listId" msprop:Generator_UserColumnName="listId" msprop:Generator_ColumnPropNameInTable="listIdColumn" msprop:Generator_ColumnPropNameInRow="listId" msprop:Generator_ColumnVarNameInTable="columnlistId" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace formsApp {
+namespace Almond {
     
     
     /// <summary>
@@ -1085,7 +1085,7 @@ namespace formsApp {
         }
     }
 }
-namespace formsApp.sonapplicationDatabaseDataSetTableAdapters {
+namespace Almond.sonapplicationDatabaseDataSetTableAdapters {
     
     
     /// <summary>
@@ -1227,7 +1227,7 @@ namespace formsApp.sonapplicationDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::formsApp.Properties.Settings.Default.applicationDatabaseConnectionString;
+            this._connection.ConnectionString = global::Almond.Properties.Settings.Default.applicationDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1470,7 +1470,7 @@ namespace formsApp.sonapplicationDatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::formsApp.Properties.Settings.Default.applicationDatabaseConnectionString;
+            this._connection.ConnectionString = global::Almond.Properties.Settings.Default.applicationDatabaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

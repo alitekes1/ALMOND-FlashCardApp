@@ -28,7 +28,7 @@
     <PublisherName>Ali Tekeş</PublisherName>
     <SuiteName>almond</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -88,11 +88,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="enGuncelapplicationDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>enGuncelapplicationDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="flashCardClass.cs" />
     <Compile Include="formCreateList.cs">
       <SubType>Form</SubType>
@@ -213,17 +208,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="enGuncelapplicationDatabaseDataSet.xsc">
-      <DependentUpon>enGuncelapplicationDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="enGuncelapplicationDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>enGuncelapplicationDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="enGuncelapplicationDatabaseDataSet.xss">
-      <DependentUpon>enGuncelapplicationDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

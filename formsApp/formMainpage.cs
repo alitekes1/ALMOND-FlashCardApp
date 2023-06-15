@@ -59,23 +59,23 @@ namespace formsApp
         }
         private void isChooseList()//listenin seçilip seçilmediğini kontrol eder.
         {
-            if (comboboxlisteMain.Text.Length == 0)
+            if (comboboxlisteMain.SelectedItem == null)
             {
-
+                //liste seçili değilse eğer butonlara tıklanılmasını engeller.
                 btnpuan1.Enabled = false;
                 btnpuan2.Enabled = false;
-                btnpuan3.Enabled = false;
+                butonpuan3.Enabled = false;
                 btnpuan4.Enabled = false;
                 btnpuan5.Enabled = false;
                 btnshowanswerMain.Enabled = false;
                 btnshowanswerMain.Text = "Liste Seçiniz!";
             }
             else
-            {
+            {//liste seçildiğinde butonlar tıklanılabilir hale gelir.
                 btnshowanswerMain.Text = "Cevabı Göster";
                 btnpuan1.Enabled = true;
                 btnpuan2.Enabled = true;
-                btnpuan3.Enabled = true;
+                butonpuan3.Enabled = true;
                 btnpuan4.Enabled = true;
                 btnpuan5.Enabled = true;
                 btnshowanswerMain.Enabled = true;
@@ -88,44 +88,55 @@ namespace formsApp
         }
         private void comboboxlisteMain_SelectedIndexChanged(object sender, EventArgs e)
         {
+            datatableforPDF();
             labelsoru.Visible = true;
             i = 0;
             j = 0;
-            SqlCommand komut = new SqlCommand("select quesiton,answer,listName,puan,soruNo from data_table where listName=@list and answer is not null order by puan asc", flashCard.baglanti());//seçilen listeye göre data gride verileri aktarır ve puan artan şekilde sıralar
+            SqlCommand komut = new SqlCommand("select idnumber,quesiton,answer,listName,puan,soruNo from data_table where listName=@list and answer is not null order by puan asc", flashCard.baglanti());//seçilen listeye göre data gride verileri aktarır ve puan artan şekilde sıralar
             komut.Parameters.AddWithValue("@list", comboboxlisteMain.Text);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataSet ds = new DataSet();
             da.Fill(ds);
             datagridMain.DataSource = ds.Tables[0];
             flashCard.baglanti().Close();
+            showCard();
             isChooseList();
-            if (i < datagridMain.Rows.Count - 1)
-            {//ilgili hücredeki veriyi label a aktarır.
-                labelsoru.Text = datagridMain.Rows[i].Cells[0].Value.ToString();
-                labelSoruNo.Text = datagridMain.Rows[i].Cells[4].Value.ToString();
-                i++;
-            }
         }
+
+        private void datatableforPDF()
+        {
+            SqlCommand komut1 = new SqlCommand("select quesiton,answer,puan from data_table where listName=@parameter and answer is not null order by puan asc", flashCard.baglanti());//seçilen listeye göre data gride verileri aktarır ve puan artan şekilde sıralar
+            komut1.Parameters.AddWithValue("@parameter", comboboxlisteMain.Text);
+            SqlDataAdapter da1 = new SqlDataAdapter(komut1);
+            DataSet ds1 = new DataSet();
+            da1.Fill(ds1);
+            datagridPDF.DataSource = ds1.Tables[0];
+            datagridPDF.Columns[0].HeaderText = "Soru";
+            datagridPDF.Columns[1].HeaderText = "Cevap";
+            datagridPDF.Columns[2].HeaderText = "Puan";
+            flashCard.baglanti().Close();
+        }
+
         private void btnShowDialoganswerMain_Click(object sender, EventArgs e)
         {
             labelcevap.Visible = true;
-            labelcevap.Text = datagridMain.Rows[j].Cells[1].Value.ToString();//cevabı göster butonuna basıldığında
+            labelcevap.Text = datagridMain.Rows[j].Cells[2].Value.ToString();//cevabı göster butonuna basıldığında
         }
         private void showCard()
         {
-            
+
             labelcevap.Visible = false;
             ///soruyu ekrana yazdırma
             if (i < datagridMain.Rows.Count - 1)//datagridin son satırına gelene kadar git ve hücreyi labela aktar
             {
-                labelsoru.Text = datagridMain.Rows[i].Cells[0].Value.ToString();
-                labelSoruNo.Text = datagridMain.Rows[i].Cells[4].Value.ToString();
+                labelsoru.Text = datagridMain.Rows[i].Cells[1].Value.ToString();
+                labelSoruNo.Text = datagridMain.Rows[i].Cells[5].Value.ToString();
                 i++;
             }
             /// cevabı ekrana yazırma 
             if (j < datagridMain.Rows.Count - 1)//datagridin son satırına kadar git ve hücreyi labela aktar
             {
-                labelcevap.Text = datagridMain.Rows[j].Cells[1].Value.ToString();
+                labelcevap.Text = datagridMain.Rows[j].Cells[2].Value.ToString();
                 j++;
             }
 
@@ -145,8 +156,8 @@ namespace formsApp
         private void puanUpdate(Label label, int artis)//puan artırma fonksiyonu
         {
             SqlCommand komut = new SqlCommand("update data_table set puan+=@p2 where soruNo=@p1", flashCard.baglanti());
+            komut.Parameters.AddWithValue("@p1", label.Text);
             komut.Parameters.AddWithValue("@p2", artis);
-            komut.Parameters.AddWithValue("@p1", label.Text.ToString());
             komut.ExecuteNonQuery();
             flashCard.baglanti().Close();
         }
@@ -167,6 +178,7 @@ namespace formsApp
             int artis = 3;
             puanUpdate(labelSoruNo, artis);
             showCard();
+            MessageBox.Show("merhaba");
         }
         private void btnpuan4_Click(object sender, EventArgs e)
         {
@@ -204,7 +216,7 @@ namespace formsApp
         {
             MessageBox.Show("Çok Yakında...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        private void pDFToolStripMenuItem1_Click(object sender, EventArgs e)//PDF İŞLEMLERİ 
+        private void pDFToolStripMenuItem1_Click(object sender, EventArgs e)//PDF İŞLEMLERİ (bu kısım hazır olarak alınmıştır).
         {
             SaveFileDialog save = new SaveFileDialog();
             save.OverwritePrompt = false;
@@ -213,28 +225,31 @@ namespace formsApp
             save.Filter = "PDF Dosyaları (*.pdf)|*.pdf|Tüm Dosyalar(*.*)|*.*";
             if (save.ShowDialog() == DialogResult.OK)
             {
-                PdfPTable pdfTable = new PdfPTable(datagridMain.ColumnCount);
-
+                PdfPTable pdfTable = new PdfPTable(datagridPDF.ColumnCount);
                 pdfTable.DefaultCell.Padding = 3; // hücre duvarı ve veri arasında mesafe
-                pdfTable.WidthPercentage = 80; // hücre genişliği
-                pdfTable.HorizontalAlignment = Element.ALIGN_LEFT; // yazı hizalaması
+                pdfTable.WidthPercentage = 95; // hücre genişliği
+                pdfTable.HorizontalAlignment = Element.ALIGN_MIDDLE; // yazı hizalaması
                 pdfTable.DefaultCell.BorderWidth = 1; // kenarlık kalınlığı
-
-                foreach (DataGridViewColumn column in datagridMain.Columns)
+                                                      //pdfTable.DefaultCell.VerticalAlignment= Element.ALIGN_MIDDLE;
+                foreach (DataGridViewColumn column in datagridPDF.Columns)
                 {
                     PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
                     cell.BackgroundColor = new iTextSharp.text.Color(240, 240, 240); // hücre arka plan rengi
+                    cell.HorizontalAlignment = Element.ALIGN_CENTER; // Başlıkları ortala
                     pdfTable.AddCell(cell);
                 }
+
+
                 try
                 {
-                    foreach (DataGridViewRow row in datagridMain.Rows)
+                    foreach (DataGridViewRow row in datagridPDF.Rows)
                     {
                         foreach (DataGridViewCell cell in row.Cells)
                         {
                             pdfTable.AddCell(cell.Value.ToString());
                         }
                     }
+
                 }
                 catch (NullReferenceException)
                 {
@@ -244,12 +259,15 @@ namespace formsApp
                     Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);// sayfa boyutu.
                     PdfWriter.GetInstance(pdfDoc, stream);
                     pdfDoc.Open();
+                    pdfDoc.Add(new Paragraph(" ", FontFactory.GetFont(FontFactory.HELVETICA, 30)));
                     pdfDoc.Add(pdfTable);
                     pdfDoc.Close();
                     stream.Close();
                 }
             }
         }
+
+
         //kısayol işlemleri
         private void FormMainpage_KeyDown_1(object sender, KeyEventArgs e)
         {
@@ -313,6 +331,20 @@ namespace formsApp
         {
             formShortCuts formShortCuts = new formShortCuts();
             formShortCuts.ShowDialog();
+        }
+
+        private void indirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (comboboxlisteMain.SelectedItem == null)
+            {
+                MessageBox.Show("PDF halinde almak istediğiniz listeyi anasayfadan seçiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comboboxlisteMain.Focus();
+            }
+        }
+
+        private void labelsoru_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
