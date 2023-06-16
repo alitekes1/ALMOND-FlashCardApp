@@ -120,7 +120,7 @@ namespace formsApp
         private void btnShowDialoganswerMain_Click(object sender, EventArgs e)
         {
             labelcevap.Visible = true;
-            labelcevap.Text = datagridMain.Rows[j].Cells[2].Value.ToString();//cevabı göster butonuna basıldığında
+            //labelcevap.Text = datagridMain.Rows[j].Cells[2].Value.ToString();//cevabı göster butonuna basıldığında
         }
         private void showCard()
         {
@@ -178,7 +178,6 @@ namespace formsApp
             int artis = 3;
             puanUpdate(labelSoruNo, artis);
             showCard();
-            MessageBox.Show("merhaba");
         }
         private void btnpuan4_Click(object sender, EventArgs e)
         {
@@ -343,6 +342,11 @@ namespace formsApp
         }
 
         private void labelsoru_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

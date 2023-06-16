@@ -186,6 +186,7 @@
             this.groupBox1.Size = new System.Drawing.Size(893, 330);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -201,8 +202,10 @@
             // comboboxlisteMain
             // 
             this.comboboxlisteMain.DisplayMember = "listName";
+            this.comboboxlisteMain.DropDownHeight = 100;
             this.comboboxlisteMain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxlisteMain.FormattingEnabled = true;
+            this.comboboxlisteMain.IntegralHeight = false;
             this.comboboxlisteMain.Location = new System.Drawing.Point(654, 48);
             this.comboboxlisteMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboboxlisteMain.MaxDropDownItems = 4;
@@ -230,7 +233,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(621, 85);
+            this.groupBox2.Size = new System.Drawing.Size(620, 85);
             this.groupBox2.TabIndex = 120;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Soru";
@@ -256,7 +259,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(621, 96);
+            this.groupBox4.Size = new System.Drawing.Size(620, 85);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Cevap";
@@ -277,7 +280,7 @@
             // btnshowanswerMain
             // 
             this.btnshowanswerMain.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnshowanswerMain.Location = new System.Drawing.Point(366, 283);
+            this.btnshowanswerMain.Location = new System.Drawing.Point(366, 275);
             this.btnshowanswerMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnshowanswerMain.Name = "btnshowanswerMain";
             this.btnshowanswerMain.Size = new System.Drawing.Size(156, 30);
@@ -303,7 +306,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(906, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(907, 28);
             this.menuStrip1.TabIndex = 90;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -340,7 +343,7 @@
             // gösterToolStripMenuItem
             // 
             this.gösterToolStripMenuItem.Name = "gösterToolStripMenuItem";
-            this.gösterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gösterToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.gösterToolStripMenuItem.Text = "Göster";
             this.gösterToolStripMenuItem.Click += new System.EventHandler(this.gösterToolStripMenuItem_Click);
             // 
@@ -349,14 +352,14 @@
             this.indirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pDFToolStripMenuItem1});
             this.indirToolStripMenuItem.Name = "indirToolStripMenuItem";
-            this.indirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.indirToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.indirToolStripMenuItem.Text = "İndir";
             this.indirToolStripMenuItem.Click += new System.EventHandler(this.indirToolStripMenuItem_Click);
             // 
             // pDFToolStripMenuItem1
             // 
             this.pDFToolStripMenuItem1.Name = "pDFToolStripMenuItem1";
-            this.pDFToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.pDFToolStripMenuItem1.Size = new System.Drawing.Size(118, 26);
             this.pDFToolStripMenuItem1.Text = "PDF";
             this.pDFToolStripMenuItem1.Click += new System.EventHandler(this.pDFToolStripMenuItem1_Click);
             // 
@@ -482,7 +485,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(906, 453);
+            this.ClientSize = new System.Drawing.Size(907, 453);
             this.Controls.Add(this.datagridPDF);
             this.Controls.Add(this.labelSoruNo);
             this.Controls.Add(this.groupBox3);
