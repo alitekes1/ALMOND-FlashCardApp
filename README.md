@@ -3,7 +3,7 @@ AlmondDesktop uygulaması, WinForms ile yapılmış bir desktop uygulamasıdır.
 Tanımları ve açıklamaları hatırlayarak bilgiyi öğrenebilirler.Hatırlama düzeyine göre kendini puanlayabilir. 
 Puanladığı kartları tekrar gözden geçirebilirler. Öğrenciler, öğretmenler, dil öğrenenler ve herhangi bir konuda
 öğrenmek isteyenler için faydalı bir araçtır.
-
+Programlama dil olarak C# ve SQL kullanılmıştır.Veritabanı yönetim sistemi olarak Microsoft SQL Server kullanılmıştır.
 
 ![image](https://user-images.githubusercontent.com/112067233/229801977-2282fe80-5304-4117-943e-13473a69293c.png)
 ![image](https://user-images.githubusercontent.com/112067233/236503321-c8fbd819-0103-4722-ac1e-cd6199e825c6.png)
